@@ -18,7 +18,7 @@ const Navbar = () => {
                 </li>
             </ul>
             <div className="nav-search">
-                <input type="search" placeholder="Pesquisar" aria-label="Pesquisar"/>
+                <input type="search" placeholder="Buscar" aria-label="Buscar"/>
                 <button type="submit"><FaSearch/></button>
             </div>
         </nav>
