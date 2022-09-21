@@ -1,0 +1,34 @@
+section {
+    max-width: 150vw;
+    max-height: 100vh;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    .overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: var(--color-dark-black);
+        filter: blur(2px) drop-shadow(20px 13px 24px var(--color-medium-black)) brightness(50%);
+        opacity: .75;
+        z-index: -1;
+    }
+
+    div {
+        width: 315px;
+        display: flex;
+        justify-content: center;
+        gap: 0;
+        overflow: hidden;
+        margin: .5rem 0;
+        z-index: -10;
+        
+
+        img {
+            width: 100%;
+        }
+    }
+}

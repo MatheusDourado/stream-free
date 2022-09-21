@@ -1,0 +1,14 @@
+.title {
+    width: 100%;
+    color: var(--color-white);
+    text-transform: uppercase;
+    position: absolute;
+    top: 40%;
+    font-size: 5rem;
+    filter: drop-shadow(5px 5px 22px #000);
+    text-align: center;
+
+    h1 {
+        font-weight: 100;
+    }
+}

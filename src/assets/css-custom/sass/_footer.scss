@@ -1,0 +1,16 @@
+footer {
+    width: 100vw;
+    height: 75px;
+    // background-color: var(--color-medium-black);
+    color: var(--color-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    h3 {
+        font-weight: 100;
+    }
+}
