@@ -6,34 +6,34 @@ const Navbar = () => {
     return (
         <nav className="navbar-custom">
             <Link className="navbar-custom-logo" to="/" >
-                <img src="src/assets/img/logo.svg" alt="Logo" />
+                <img src="/src/assets/img/logo.svg" alt="Logo" />
             </Link>
             <ul>
                 <li>
                     <Link className="nav-link-custom" aria-current="page" to="/">Home</Link>
                 </li>
                 <li className="movies">
-                    <Link className="nav-link-custom" to="/movie/:id">Filmes</Link>
+                    <p className="nav-link-custom">Filmes</p>
 
                     <div className="dropdown-movies">
                         <ul>
-                            <li>Populares</li>
-                            <li>Em cartaz</li>
-                            <li>Próximas Estreias</li>
-                            <li>Mais bem avaliados</li>
+                            <li><Link to="/movie/populares">Populares</Link></li>
+                            <li><Link to="/movie/em-cartaz">Em cartaz</Link></li>
+                            <li><Link to="/movie/proximas-estreias">Próximas Estreias</Link></li>
+                            <li><Link to="/movie/mais-avaliados">Mais bem avaliados</Link></li>
                         </ul>
                     </div>
                 </li>
 
                 <li className="series">
-                    <Link className="nav-link-custom" to="/search">Séries</Link>
+                    <p className="nav-link-custom" >Séries</p>
 
                     <div className="dropdown-series">
                         <ul>
-                            <li>Populares</li>
-                            <li>Em exibição hoje</li>
-                            <li>Na TV</li>
-                            <li>Mais bem avaliados</li>
+                            <li><Link to="/serie/populares">Populares</Link></li>
+                            <li><Link to="/serie/em-exibicao">Em exibição hoje</Link></li>
+                            <li><Link to="/serie/na-tv">Na TV</Link></li>
+                            <li><Link to="/serie/mais-avaliados">Mais bem avaliados</Link></li>
                         </ul>
                     </div>
                 </li>
