@@ -30,11 +30,11 @@ const Home = () => {
     return ( 
         <>
             <Title/>
-            <section> 
+            <section className="section-home"> 
                 <span className="overlay"></span>
                 {topMovies.map(movie => 
-                    <div>
-                        <img src={api_img + movie.backdrop_path} alt={movie.title}></img>
+                    <div className="div-home">
+                        <img className="img-home" src={api_img + movie.backdrop_path} alt={movie.title}></img>
                     </div>
                 )}
             </section> 
