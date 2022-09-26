@@ -3,6 +3,7 @@ import { FaSearch } from "react-icons/fa"
 
 
 const Navbar = () => {
+
     return (
         <nav className="navbar-custom">
             <Link className="navbar-custom-logo" to="/" >
@@ -17,7 +18,7 @@ const Navbar = () => {
 
                     <div className="dropdown-movies">
                         <ul>
-                            <li><Link to="/movie/populares">Populares</Link></li>
+                            <li><Link to="/movie/populares" >Populares</Link></li>
                             <li><Link to="/movie/em-cartaz">Em cartaz</Link></li>
                             <li><Link to="/movie/proximas-estreias">Próximas Estreias</Link></li>
                             <li><Link to="/movie/mais-avaliados">Mais bem avaliados</Link></li>
