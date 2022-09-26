@@ -1,4 +1,4 @@
-section {
+.section-home {
     max-width: 150vw;
     max-height: 100vh;
     padding: 0;
@@ -17,7 +17,7 @@ section {
         z-index: -1;
     }
 
-    div {
+    .div-home {
         width: 315px;
         display: flex;
         justify-content: center;
@@ -27,7 +27,7 @@ section {
         z-index: -10;
         
 
-        img {
+        .img-home {
             width: 100%;
         }
     }
