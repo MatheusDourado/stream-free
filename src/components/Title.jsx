@@ -2,7 +2,7 @@ const Title = () => {
     return (
         <>
             <section className="title">
-                <h1>Pirate Flix</h1>
+                <h1>Stream Free</h1>
             </section>
         </>
     )
