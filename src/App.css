@@ -339,4 +339,99 @@ footer h3 {
   font-weight: 100;
 }
 
+.section_datelhes {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 75px);
+}
+.section_datelhes .img_detalhes {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 25%;
+  height: auto;
+  padding: 0 1rem;
+}
+.section_datelhes .img_detalhes .img_movie {
+  height: 95%;
+  border-radius: 0.25rem;
+}
+.section_datelhes .container_detalhes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 75%;
+  padding: 1.5rem;
+}
+.section_datelhes .container_detalhes .header_detalhes {
+  margin-bottom: 2rem;
+  color: var(--color-gray);
+}
+.section_datelhes .container_detalhes .header_detalhes .title_detalhes {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.section_datelhes .container_detalhes .header_detalhes .title_detalhes span {
+  margin-left: 0.75rem;
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+.section_datelhes .container_detalhes .header_detalhes .list_detalhes {
+  width: 100%;
+  display: flex;
+}
+.section_datelhes .container_detalhes .header_detalhes .list_detalhes .list_item p {
+  color: var(--color-gray);
+  font-size: 1.25rem;
+}
+.section_datelhes .container_detalhes .header_detalhes .list_detalhes .list_item:nth-child(2) {
+  display: flex;
+  margin: 0 0.5rem;
+}
+.section_datelhes .container_detalhes .header_detalhes .list_detalhes .list_item:nth-child(2) p {
+  margin: 0 0.25rem;
+}
+
+.main_detalhes {
+  color: var(--color-gray);
+  height: calc(100vh - 75px);
+}
+.main_detalhes .tagline_detalhes {
+  font-size: 2rem;
+  font-style: italic;
+}
+.main_detalhes .title_sinopse {
+  font-size: 2.5rem;
+  font-weight: 100;
+  margin: 1rem 0 0 0;
+}
+.main_detalhes .overview_detalhes {
+  margin: 1rem 0 3rem 0;
+  font-size: 1.25rem;
+}
+.main_detalhes .trailer_detalhes {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: var(--color-gray);
+  margin-top: 0rem;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  background-color: transparent;
+  border: 3px solid var(--color-yellow);
+  transition: 0.5s;
+}
+.main_detalhes .trailer_detalhes:hover {
+  transition: 0.5s;
+  color: var(--color-medium-black);
+  font-weight: 700;
+  background-color: var(--color-yellow);
+}
+.main_detalhes .credits_info_detalhes {
+  margin-top: 2rem;
+}
+
 /*# sourceMappingURL=App.css.map */

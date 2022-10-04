@@ -1,0 +1,114 @@
+.section_datelhes {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 75px);
+
+    .img_detalhes {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 25%;
+        height: auto;
+        padding: 0 1rem;
+
+        .img_movie {
+            // width: 80%;
+            height: 95%;
+            border-radius: .25rem;
+        }
+    }
+
+    .container_detalhes {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        width: 75%;
+        padding: 1.5rem;
+        // background-color: red;
+
+        .header_detalhes {
+            margin-bottom: 2rem;
+            color: var(--color-gray);
+
+
+            .title_detalhes {
+                font-size: 3rem;
+                font-weight: 700;
+                
+                span {
+                    margin-left: .75rem;
+                    font-size: 2.5rem;
+                    font-weight: 100;
+                }
+            }
+
+            .list_detalhes {
+                width: 100%;
+                display: flex;
+
+                .list_item p {
+                    color: var(--color-gray);
+                    font-size: 1.25rem;
+                }
+
+                .list_item:nth-child(2) {
+                    display: flex;
+                    margin: 0 .5rem;
+                    p {
+                        margin: 0 .25rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main_detalhes {
+    color: var(--color-gray);
+    height: calc(100vh - 75px);
+    // background-color: red;
+
+    .tagline_detalhes {
+        font-size: 2rem;
+        font-style: italic;
+    }
+
+    .title_sinopse {
+        font-size: 2.5rem;
+        font-weight: 100;
+        margin: 1rem 0 0 0;
+    }
+
+    .overview_detalhes {
+        margin: 1rem 0 3rem 0;
+        font-size: 1.25rem;
+    }
+
+    .trailer_detalhes {
+        width: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        color: var(--color-gray);
+        margin-top: 0rem;
+        font-size: 1rem;
+        font-weight: 700;
+        padding: .5rem 1rem;
+        border-radius: .25rem;
+        background-color: transparent;
+        border: 3px solid var(--color-yellow);
+        transition: .5s;
+
+        &:hover {
+            transition: .5s;
+            color: var(--color-medium-black);
+            font-weight: 700;
+            background-color: var(--color-yellow);
+        }
+    }
+
+    .credits_info_detalhes {
+        margin-top: 2rem;
+    }
+}

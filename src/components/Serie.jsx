@@ -6,8 +6,8 @@ import { FaPlay } from "react-icons/fa"
 //API
 import { api } from '../utils/keys'
 
-const Movie = () => {
-    const [movieSelected, setMovieSelected] = useState({})
+const Serie = () => {
+    const [serieSeleted, setserieSeleted] = useState({})
     const [directorSelected, setDirectorSelected]  = useState({})
     const {id} = useParams()
 
@@ -24,7 +24,7 @@ const Movie = () => {
         (async () => {
             const response = await fetch(`${api.url}${api.type_movie}/${id}?${api.key}${api.language}`)
             const data = await response.json()
-            setMovieSelected(data)
+            setserieSeleted(data)
         })()
         
     }, [id]);
@@ -47,31 +47,31 @@ const Movie = () => {
     return (
         <section className="section_datelhes">
             <div className="img_detalhes">
-                <img className="img_movie" src={`${api.img}${movieSelected.poster_path}`} alt={movieSelected.title}/>
+                <img className="img_movie" src={`${api.img}${serieSeleted.poster_path}`} alt={serieSeleted.title}/>
             </div>
             
             <div className="container_detalhes">
                 <div className="header_detalhes">
-                    <h2 className="title_detalhes">{movieSelected.title}<span>({movieSelected.release_date?.split('-')[0]})</span></h2>
+                    <h2 className="title_detalhes">{serieSeleted.title}<span>({serieSeleted.release_date?.split('-')[0]})</span></h2>
                     <ul className="list_detalhes">
                         <li className="list_item">
-                            <p>{new Date(`${movieSelected.release_date} 23:59:00`).toLocaleDateString('pt-BR')}</p>
+                            <p>{new Date(`${serieSeleted.release_date} 23:59:00`).toLocaleDateString('pt-BR')}</p>
                         </li>
                         <li className="list_item">
-                            {movieSelected?.genres?.map(item => (
+                            {serieSeleted?.genres?.map(item => (
                                 <p key={item.id}>{item.name}</p>
                             ))}
                         </li>
                         <li className="list_item">
-                            <p>{convertTime(movieSelected.runtime)}</p>
+                            <p>{convertTime(serieSeleted.runtime)}</p>
                         </li>
                     </ul>
                 </div>
 
                 <div className="main_detalhes">
-                    <span className="tagline_detalhes">{movieSelected.tagline}</span>
+                    <span className="tagline_detalhes">{serieSeleted.tagline}</span>
                     <h3 className="title_sinopse">Sinopse</h3>
-                    <p className="overview_detalhes">{movieSelected.overview}</p>
+                    <p className="overview_detalhes">{serieSeleted.overview}</p>
                     <button className="trailer_detalhes" onClick={handleTrailer}><FaPlay/> Trailer </button>
 
                     <div className="credits_info_detalhes">
@@ -84,4 +84,4 @@ const Movie = () => {
     )
 }
 
-export default Movie
+export default Serie

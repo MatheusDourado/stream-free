@@ -1,20 +1,18 @@
+//React
 import React, { useState, useEffect } from "react"
 
+//Components
 import CardMovie from "../components/CardMovie";
 
-
-const api_key = import.meta.env.VITE_API_KEY
-const api_url = import.meta.env.VITE_API_URL
-const api_type_movie = import.meta.env.VITE_API_TYPE_MOVIE
-const api_language = '&language=pt-BR'
-
+//API
+import { api } from "../utils/keys";
 
 const TopRatedMovie = () => {
     const [state, setstate] = useState([])
 
     useEffect(() => {
         (async () => {
-            const response = await fetch(`${api_url}${api_type_movie}/top_rated?${api_key}${api_language}`)
+            const response = await fetch(`${api.url}${api.type_movie}/top_rated?${api.key}${api.language}`)
             const data = await response.json()
     
             setstate(data.results)
