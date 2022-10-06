@@ -7,12 +7,12 @@ import CardSerie from "../components/CardSerie";
 //API
 import { api } from "../utils/keys";
 
-const PopularSerie = () => {
+const TopRatedSerie = () => {
     const [state, setstate] = useState([])
 
     useEffect(() => {
         (async () => {
-            const response = await fetch(`${api.url}${api.type_serie}/popular?${api.key}${api.language}` )
+            const response = await fetch(`${api.url}${api.type_serie}/top_rated?${api.key}${api.language}` )
             const data = await response.json()
             
             setstate(data.results)
@@ -20,8 +20,8 @@ const PopularSerie = () => {
         
     }, [])
     return (
-        <CardSerie title="Séries Populares" series={state}/>
+        <CardSerie title="Séries mais bem avaliadas" series={state}/>
     )
 }
 
-export default PopularSerie;
+export default TopRatedSerie

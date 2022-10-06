@@ -28,7 +28,7 @@ const Home = () => {
             <section className="section-home"> 
                 <span className="overlay"></span>
                 {topMovies.map(movie => 
-                    <div className="div-home">
+                    <div className="div-home" key={movie.id}>
                         <img className="img-home" src={api.img + movie.backdrop_path} alt={movie.title}></img>
                     </div>
                 )}
