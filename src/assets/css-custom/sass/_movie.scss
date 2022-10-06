@@ -2,18 +2,20 @@
     display: flex;
     width: 100%;
     height: calc(100vh - 75px);
+    // background-color: green;
 
     .img_detalhes {
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
-        width: 25%;
+        width: 35%;
         height: auto;
         padding: 0 1rem;
+        // background-color: blue;
 
         .img_movie {
             // width: 80%;
-            height: 95%;
+            height: 90%;
             border-radius: .25rem;
         }
     }
@@ -22,14 +24,16 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        
-        width: 75%;
+        // width: 75%;
+        flex: 1;
         padding: 1.5rem;
         // background-color: red;
+        margin: 0;
 
         .header_detalhes {
             margin-bottom: 2rem;
             color: var(--color-gray);
+            // background-color: blue;
 
 
             .title_detalhes {
@@ -46,19 +50,25 @@
             .list_detalhes {
                 width: 100%;
                 display: flex;
+                
+                .list_item {
+                    // width: 100%;
+                    display: flex;
+                }
 
                 .list_item p {
                     color: var(--color-gray);
                     font-size: 1.25rem;
+                    margin: 0 .5rem;
                 }
 
-                .list_item:nth-child(2) {
-                    display: flex;
-                    margin: 0 .5rem;
-                    p {
-                        margin: 0 .25rem;
-                    }
-                }
+                // .list_item:nth-child(2) {
+                //     display: flex;
+                //     margin: 0 .5rem;
+                //     p {
+                //         margin: 0 .25rem;
+                //     }
+                // }
             }
         }
     }
@@ -67,7 +77,7 @@
 .main_detalhes {
     color: var(--color-gray);
     height: calc(100vh - 75px);
-    // background-color: red;
+    // background-color: yellow;
 
     .tagline_detalhes {
         font-size: 2rem;

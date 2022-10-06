@@ -13,16 +13,16 @@ const Serie = () => {
 
     useEffect(() => {
         (async () => {
-            const response = await fetch(`${api.url}${api.type_movie}/${id}/credits?${api.key}`)
+            const response = await fetch(`${api.url}${api.type_serie}/${id}/credits?${api.key}`)
             const data = await response.json()
-            const credits_info = data.crew.filter(item => item.job === 'Director')
+            const credits_info = data.crew.filter(item => item.job === 'Executive Producer')
             setDirectorSelected(credits_info[0])
         })()
     }, [id])
 
     useEffect(() => {
         (async () => {
-            const response = await fetch(`${api.url}${api.type_movie}/${id}?${api.key}${api.language}`)
+            const response = await fetch(`${api.url}${api.type_serie}/${id}?${api.key}${api.language}`)
             const data = await response.json()
             setserieSeleted(data)
         })()
@@ -38,7 +38,7 @@ const Serie = () => {
     }
 
     const handleTrailer = async () => {
-        const response = await fetch(`${api.url}${api.type_movie}/${id}/videos?${api.key}${api.language}`)
+        const response = await fetch(`${api.url}${api.type_serie}/${id}/videos?${api.key}${api.language}`)
         const data = await response.json()
 
         window.open(`https://www.youtube.com/watch?v=${data.results[0].key}`, '_blank')
@@ -52,18 +52,12 @@ const Serie = () => {
             
             <div className="container_detalhes">
                 <div className="header_detalhes">
-                    <h2 className="title_detalhes">{serieSeleted.title}<span>({serieSeleted.release_date?.split('-')[0]})</span></h2>
+                    <h2 className="title_detalhes">{serieSeleted.original_name}<span>({serieSeleted.first_air_date?.split('-')[0].concat(' - ')}{serieSeleted.last_air_date?.split('-')[0]})</span></h2>
                     <ul className="list_detalhes">
-                        <li className="list_item">
-                            <p>{new Date(`${serieSeleted.release_date} 23:59:00`).toLocaleDateString('pt-BR')}</p>
-                        </li>
                         <li className="list_item">
                             {serieSeleted?.genres?.map(item => (
                                 <p key={item.id}>{item.name}</p>
                             ))}
-                        </li>
-                        <li className="list_item">
-                            <p>{convertTime(serieSeleted.runtime)}</p>
                         </li>
                     </ul>
                 </div>

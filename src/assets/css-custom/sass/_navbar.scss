@@ -11,7 +11,6 @@
 .navbar-custom-logo {
     width: 15%;
     height: 100%;
-    // background-color: red;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -58,24 +57,22 @@
     z-index: 100;
 
     &:hover {
-
         .dropdown-movies {
             display: block;
             background-color: transparent;
 
-
-            ul {
+            .dropdown-ul {
                 width: auto;
                 display: block;
                 background-color: var(--color-medium-black);
                 overflow: hidden;
                 border-radius: 0 0 .25rem .25rem;
     
-                li {
+                .dropdown-li {
                     width: 180px;
-                    font-size: .85rem;
+                    display: flex;
                     margin: 0;
-                    padding: .5rem .5rem;
+                    font-size: .85rem;
                     color: var(--color-white);
                     
     
@@ -84,17 +81,16 @@
                         color: var(--color-dark-black);
                         background-color: var(--color-white);
 
-                        a {
+                        .dropdown-link {
+                            background-color: var(--color-white);
                             color: var(--color-medium-black);
                         }
                     }
 
-                    a {
+                    .dropdown-link {
+                        width: 100%;
+                        padding: .5rem;
                         color: var(--color-white);
-
-                        &:hover {
-                            background-color: transparent;
-                        }
                     }
                 }
             }
@@ -106,23 +102,6 @@
         display: none;
         position: absolute;
         background-color: white;
-
-        ul {
-            width: auto;
-            display: block;
-
-            li {
-                width: 180px;
-                font-size: .85rem;
-                margin: 0;
-                padding: .5rem .5rem;
-                color: var(--color-dark-black);
-
-                &:hover {
-                    background-color: var(--color-gray);
-                }
-            }
-        }
     }
 }
 
@@ -131,24 +110,22 @@
     z-index: 100;
 
     &:hover {
-
         .dropdown-series {
             display: block;
             background-color: transparent;
 
-
-            ul {
+            .dropdown-ul {
                 width: auto;
                 display: block;
                 background-color: var(--color-medium-black);
                 overflow: hidden;
                 border-radius: 0 0 .25rem .25rem;
     
-                li {
+                .dropdown-li {
                     width: 180px;
-                    font-size: .85rem;
+                    display: flex;
                     margin: 0;
-                    padding: .5rem .5rem;
+                    font-size: .85rem;
                     color: var(--color-white);
                     
     
@@ -157,17 +134,16 @@
                         color: var(--color-dark-black);
                         background-color: var(--color-white);
 
-                        a {
+                        .dropdown-link {
+                            background-color: var(--color-white);
                             color: var(--color-medium-black);
                         }
                     }
 
-                    a {
+                    .dropdown-link {
+                        width: 100%;
+                        padding: .5rem;
                         color: var(--color-white);
-
-                        &:hover {
-                            background-color: transparent;
-                        }
                     }
                 }
             }
@@ -179,23 +155,6 @@
         display: none;
         position: absolute;
         background-color: white;
-
-        ul {
-            width: auto;
-            display: block;
-
-            li {
-                width: 180px;
-                font-size: .85rem;
-                margin: 0;
-                padding: .5rem .5rem;
-                color: var(--color-dark-black);
-
-                &:hover {
-                    background-color: var(--color-gray);
-                }
-            }
-        }
     }
 }
 
