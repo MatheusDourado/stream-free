@@ -62,53 +62,39 @@
   display: block;
   background-color: transparent;
 }
-.movies:hover .dropdown-movies ul {
+.movies:hover .dropdown-movies .dropdown-ul {
   width: auto;
   display: block;
   background-color: var(--color-medium-black);
   overflow: hidden;
   border-radius: 0 0 0.25rem 0.25rem;
 }
-.movies:hover .dropdown-movies ul li {
+.movies:hover .dropdown-movies .dropdown-ul .dropdown-li {
   width: 180px;
-  font-size: 0.85rem;
+  display: flex;
   margin: 0;
-  padding: 0.5rem 0.5rem;
+  font-size: 0.85rem;
   color: var(--color-white);
 }
-.movies:hover .dropdown-movies ul li:hover {
+.movies:hover .dropdown-movies .dropdown-ul .dropdown-li:hover {
   cursor: pointer;
   color: var(--color-dark-black);
   background-color: var(--color-white);
 }
-.movies:hover .dropdown-movies ul li:hover a {
+.movies:hover .dropdown-movies .dropdown-ul .dropdown-li:hover .dropdown-link {
+  background-color: var(--color-white);
   color: var(--color-medium-black);
 }
-.movies:hover .dropdown-movies ul li a {
+.movies:hover .dropdown-movies .dropdown-ul .dropdown-li .dropdown-link {
+  width: 100%;
+  padding: 0.5rem;
   color: var(--color-white);
-}
-.movies:hover .dropdown-movies ul li a:hover {
-  background-color: transparent;
 }
 .movies .dropdown-movies {
   width: auto;
   display: none;
   position: absolute;
   background-color: white;
-}
-.movies .dropdown-movies ul {
-  width: auto;
-  display: block;
-}
-.movies .dropdown-movies ul li {
-  width: 180px;
-  font-size: 0.85rem;
-  margin: 0;
-  padding: 0.5rem 0.5rem;
-  color: var(--color-dark-black);
-}
-.movies .dropdown-movies ul li:hover {
-  background-color: var(--color-gray);
 }
 
 .series {
@@ -119,53 +105,39 @@
   display: block;
   background-color: transparent;
 }
-.series:hover .dropdown-series ul {
+.series:hover .dropdown-series .dropdown-ul {
   width: auto;
   display: block;
   background-color: var(--color-medium-black);
   overflow: hidden;
   border-radius: 0 0 0.25rem 0.25rem;
 }
-.series:hover .dropdown-series ul li {
+.series:hover .dropdown-series .dropdown-ul .dropdown-li {
   width: 180px;
-  font-size: 0.85rem;
+  display: flex;
   margin: 0;
-  padding: 0.5rem 0.5rem;
+  font-size: 0.85rem;
   color: var(--color-white);
 }
-.series:hover .dropdown-series ul li:hover {
+.series:hover .dropdown-series .dropdown-ul .dropdown-li:hover {
   cursor: pointer;
   color: var(--color-dark-black);
   background-color: var(--color-white);
 }
-.series:hover .dropdown-series ul li:hover a {
+.series:hover .dropdown-series .dropdown-ul .dropdown-li:hover .dropdown-link {
+  background-color: var(--color-white);
   color: var(--color-medium-black);
 }
-.series:hover .dropdown-series ul li a {
+.series:hover .dropdown-series .dropdown-ul .dropdown-li .dropdown-link {
+  width: 100%;
+  padding: 0.5rem;
   color: var(--color-white);
-}
-.series:hover .dropdown-series ul li a:hover {
-  background-color: transparent;
 }
 .series .dropdown-series {
   width: auto;
   display: none;
   position: absolute;
   background-color: white;
-}
-.series .dropdown-series ul {
-  width: auto;
-  display: block;
-}
-.series .dropdown-series ul li {
-  width: 180px;
-  font-size: 0.85rem;
-  margin: 0;
-  padding: 0.5rem 0.5rem;
-  color: var(--color-dark-black);
-}
-.series .dropdown-series ul li:hover {
-  background-color: var(--color-gray);
 }
 
 .nav-search {
@@ -346,22 +318,23 @@ footer h3 {
 }
 .section_datelhes .img_detalhes {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  width: 25%;
+  width: 35%;
   height: auto;
   padding: 0 1rem;
 }
 .section_datelhes .img_detalhes .img_movie {
-  height: 95%;
+  height: 90%;
   border-radius: 0.25rem;
 }
 .section_datelhes .container_detalhes {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 75%;
+  flex: 1;
   padding: 1.5rem;
+  margin: 0;
 }
 .section_datelhes .container_detalhes .header_detalhes {
   margin-bottom: 2rem;
@@ -380,16 +353,13 @@ footer h3 {
   width: 100%;
   display: flex;
 }
+.section_datelhes .container_detalhes .header_detalhes .list_detalhes .list_item {
+  display: flex;
+}
 .section_datelhes .container_detalhes .header_detalhes .list_detalhes .list_item p {
   color: var(--color-gray);
   font-size: 1.25rem;
-}
-.section_datelhes .container_detalhes .header_detalhes .list_detalhes .list_item:nth-child(2) {
-  display: flex;
   margin: 0 0.5rem;
-}
-.section_datelhes .container_detalhes .header_detalhes .list_detalhes .list_item:nth-child(2) p {
-  margin: 0 0.25rem;
 }
 
 .main_detalhes {

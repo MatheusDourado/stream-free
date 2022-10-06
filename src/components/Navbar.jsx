@@ -1,8 +1,23 @@
-import { Link } from "react-router-dom"
+//React
+import { Link, useNavigate } from "react-router-dom"
+import { useState } from "react"
 import { FaSearch } from "react-icons/fa"
 
 
 const Navbar = () => {
+    const [search, setSearch] = useState("")
+    const  navigate = useNavigate()
+    const handleSubmit = e => {
+        e.preventDefault()
+        console.log(search)
+
+        if(!search) {
+            return 
+        }
+
+        navigate(`/search?q=${search}`)
+        setSearch("")
+    }
 
     return (
         <nav className="navbar-custom">
@@ -17,11 +32,11 @@ const Navbar = () => {
                     <p className="nav-link-custom">Filmes</p>
 
                     <div className="dropdown-movies">
-                        <ul>
-                            <li><Link to="/movie/populares" >Populares</Link></li>
-                            <li><Link to="/movie/em-cartaz">Em cartaz</Link></li>
-                            <li><Link to="/movie/proximas-estreias">Próximas Estreias</Link></li>
-                            <li><Link to="/movie/mais-avaliados">Mais bem avaliados</Link></li>
+                        <ul className="dropdown-ul">
+                            <li className="dropdown-li"><Link className="dropdown-link" to="/movie/populares" >Populares</Link></li>
+                            <li className="dropdown-li"><Link className="dropdown-link" to="/movie/em-cartaz">Em cartaz</Link></li>
+                            <li className="dropdown-li"><Link className="dropdown-link" to="/movie/proximas-estreias">Próximas Estreias</Link></li>
+                            <li className="dropdown-li"><Link className="dropdown-link" to="/movie/mais-avaliados">Mais bem avaliados</Link></li>
                         </ul>
                     </div>
                 </li>
@@ -30,19 +45,19 @@ const Navbar = () => {
                     <p className="nav-link-custom" >Séries</p>
 
                     <div className="dropdown-series">
-                        <ul>
-                            <li><Link to="/serie/populares">Populares</Link></li>
-                            <li><Link to="/serie/em-exibicao">Em exibição hoje</Link></li>
-                            <li><Link to="/serie/na-tv">Na TV</Link></li>
-                            <li><Link to="/serie/mais-avaliados">Mais bem avaliados</Link></li>
+                        <ul className="dropdown-ul">
+                            <li className="dropdown-li"><Link className="dropdown-link" to="/serie/populares">Populares</Link></li>
+                            <li className="dropdown-li"><Link className="dropdown-link" to="/serie/em-exibicao">Em exibição hoje</Link></li>
+                            <li className="dropdown-li"><Link className="dropdown-link" to="/serie/na-tv">Na TV</Link></li>
+                            <li className="dropdown-li"><Link className="dropdown-link" to="/serie/mais-avaliados">Mais bem avaliados</Link></li>
                         </ul>
                     </div>
                 </li>
             </ul>
-            <div className="nav-search">
-                <input type="search" placeholder="Buscar" aria-label="Buscar"/>
+            <form className="nav-search" onSubmit={handleSubmit}>
+                <input type="search" placeholder="Buscar" aria-label="Buscar" onChange={e => setSearch(e.target.value)} value={search}/>
                 <button className="nav-submit" type="submit"><FaSearch/></button>
-            </div>
+            </form>
         </nav>
     )
 }
